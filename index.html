@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine 2.0 – Be My Valentine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- floating hearts & sparkles for dreamy background -->
+  <div class="floating-heart">♥</div>
+  <div class="floating-heart">♥</div>
+  <div class="floating-heart">♥</div>
+  <div class="floating-sparkle">✦</div>
+  <div class="floating-sparkle">✧</div>
+
+  <main class="shell">
+    <section class="glass-card" aria-label="Valentine invitation">
+      <div class="header-row">
+        <header>
+          <div class="tag">
+            <span class="tag-dot"></span>
+            <span>Valentine's Day</span>
+          </div>
+          <h1 class="headline">
+            Be My Valentine
+            <span class="headline-heart" aria-hidden="true">💕</span>
+            <span class="script">An evening just for us</span>
+          </h1>
+          <p class="subtitle">
+            A little bit of magic, a little bit of mischief, and a whole lot of love. Dress as you are, bring your
+            brightest smile.
+          </p>
+
+          <div class="invitation-text">
+            <strong>You’re invited.</strong>
+            <span>You’re invited to a special Valentine’s evening with me — a night of soft lights, warm hearts, and
+              memories we’ll replay forever.</span>
+          </div>
+
+          <div class="ribbon-divider" aria-hidden="true">
+            <div class="ribbon-strip"></div>
+            <div class="ribbon-tag">The Details</div>
+          </div>
+        </header>
+
+        <!-- Decorative rose + vase illustration -->
+        <div class="rose-scene" aria-hidden="true">
+          <div class="rose-vase"></div>
+
+          <div class="rose-stem"></div>
+          <div class="leaf left"></div>
+          <div class="leaf right"></div>
+          <div class="rose-bud"></div>
+
+          <div class="rose-stem side left"></div>
+          <div class="rose-bud side left"></div>
+
+          <div class="rose-stem side right"></div>
+          <div class="rose-bud side right"></div>
+        </div>
+      </div>
+
+      <div class="event-layout">
+        <div class="details-card" aria-label="Event details">
+          <div class="details-inner">
+            <div class="details-title">Valentine’s Evening</div>
+            <div class="details-grid">
+              <div>
+                <div class="detail-label">Date</div>
+                <div class="detail-value">February 14, 2026</div>
+              </div>
+              <div>
+                <div class="detail-label">Time</div>
+                <div class="detail-value">7:00 PM</div>
+              </div>
+              <div class="detail-location">
+                <div class="detail-label">Place</div>
+                <!-- Replace the text below with your chosen location -->
+                <div class="detail-value">[Your chosen location]</div>
+              </div>
+            </div>
+            <p class="detail-note">
+              Expect slow songs, inside jokes, shared desserts, and a hundred quiet little reasons to fall for each
+              other all over again.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="detail-label">Your Choice</div>
+          <p class="detail-value" style="margin-bottom:10px; max-width: 260px;">
+            So… will you upgrade with me to Valentine?
+          </p>
+
+          <div class="actions-row">
+            <button class="btn btn-yes" id="yesButton" type="button">
+              <span class="icon">❤️</span>
+              <span>Say Yes</span>
+            </button>
+
+            <button class="btn btn-no" id="noButton" type="button">
+              <span>No thanks</span>
+            </button>
+          </div>
+          <p class="btn-no-hint">Spoiler: only one of these buttons truly works.</p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-note">Forever yours 💌</div>
+        <div class="footer-tagline">Made with too much love &mdash; and a tiny bit of JavaScript.</div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Yes modal -->
+  <div class="modal-backdrop" id="yesModal" role="dialog" aria-modal="true" aria-labelledby="yesModalTitle"
+    aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-hearts" aria-hidden="true">
+        <span>💕</span>
+        <span>💕</span>
+      </div>
+      <h2 id="yesModalTitle">You Said Yes!</h2>
+      <p>
+        My heart just upgraded to premium. <br />
+        I can’t wait to spend this Valentine’s evening with you.
+      </p>
+      <button class="modal-close" type="button" id="closeModalButton">Can’t wait either</button>
+    </div>
+  </div>
+  <script src="./script.js" defer></script>
+</body>
+
+</html>
+
