@@ -4,62 +4,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valentine 2.0 – Be My Valentine</title>
+  <title>Be My Valentine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Lora:wght@400;500&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <!-- floating hearts & sparkles for dreamy background -->
-  <div class="floating-heart">♥</div>
-  <div class="floating-heart">♥</div>
-  <div class="floating-heart">♥</div>
-  <div class="floating-sparkle">✦</div>
-  <div class="floating-sparkle">✧</div>
+  <main class="container">
+    <section class="card" aria-label="Valentine invitation">
+      <header class="header">
+        <div class="letter-seal" aria-hidden="true">💌</div>
+        <h1 class="headline">My Valentine</h1>
+        <div class="accent-line" aria-hidden="true"></div>
+      </header>
 
-  <main class="shell">
-    <section class="glass-card" aria-label="Valentine invitation">
-      <div class="header-row">
-        <header>
-          <div class="tag">
-            <span class="tag-dot"></span>
-            <span>Valentine's Day</span>
-          </div>
-          <h1 class="headline">
-            Be My Valentine
-            <span class="headline-heart" aria-hidden="true">💕</span>
-            <span class="script">An evening just for us</span>
-          </h1>
-          <p class="subtitle">
-            A little bit of magic, a little bit of mischief, and a whole lot of love. Dress as you are, bring your
-            brightest smile.
-          </p>
+      <div class="love-letter">
+        <p class="letter-greeting">Dearest,</p>
+        <p class="letter-text">
+          Will you be my Valentine? I want to spend this day with you—filled with soft moments, quiet laughter, and all the little things that make my heart skip.
+        </p>
+        <p class="letter-text">
+          You mean everything to me. Not just today, but every day.
+        </p>
+        <p class="letter-closing">Forever yours,</p>
+        <p class="letter-signature">With all my love 💕</p>
+      </div>
 
-          <div class="invitation-text">
-            <strong>You’re invited.</strong>
-            <span>You’re invited to a special Valentine’s evening with me — a night of soft lights, warm hearts, and
-              memories we’ll replay forever.</span>
-          </div>
+      <div class="question">
+        <p>Will you be my Valentine?</p>
+      </div>
 
-          <div class="ribbon-divider" aria-hidden="true">
-            <div class="ribbon-strip"></div>
-            <div class="ribbon-tag">The Details</div>
-          </div>
-        </header>
+      <div class="actions">
+        <button class="btn btn-yes" id="yesButton" type="button">Yes</button>
+        <button class="btn btn-no" id="noButton" type="button">Not sure</button>
+      </div>
 
-        <!-- Decorative rose + vase illustration -->
-        <div class="rose-scene" aria-hidden="true">
-          <div class="rose-vase"></div>
+      <footer class="footer">
+        <p>With all my love</p>
+      </footer>
+    </section>
+  </main>
 
-          <div class="rose-stem"></div>
-          <div class="leaf left"></div>
-          <div class="leaf right"></div>
-          <div class="rose-bud"></div>
+  <!-- Yes modal -->
+  <div class="modal-backdrop" id="yesModal" role="dialog" aria-modal="true" aria-labelledby="yesModalTitle"
+    aria-hidden="true">
+    <div class="modal-card">
+      <h2 id="yesModalTitle">You Said Yes</h2>
+      <p>I can't wait to spend this evening with you.</p>
+      <button class="modal-close" type="button" id="closeModalButton">Close</button>
+    </div>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+
+</html>
 
           <div class="rose-stem side left"></div>
           <div class="rose-bud side left"></div>
@@ -116,8 +120,7 @@
       </div>
 
       <footer>
-        <div class="footer-note">Forever yours 💌</div>
-        <div class="footer-tagline">Made with too much love &mdash; and a tiny bit of JavaScript.</div>
+        <p>With all my love</p>
       </footer>
     </section>
   </main>
@@ -126,16 +129,11 @@
   <div class="modal-backdrop" id="yesModal" role="dialog" aria-modal="true" aria-labelledby="yesModalTitle"
     aria-hidden="true">
     <div class="modal-card">
-      <div class="modal-hearts" aria-hidden="true">
-        <span>💕</span>
-        <span>💕</span>
-      </div>
-      <h2 id="yesModalTitle">You Said Yes!</h2>
+      <h2 id="yesModalTitle">You Said Yes</h2>
       <p>
-        My heart just upgraded to premium. <br />
-        I can’t wait to spend this Valentine’s evening with you.
+        I can't wait to spend this evening with you.
       </p>
-      <button class="modal-close" type="button" id="closeModalButton">Can’t wait either</button>
+      <button class="modal-close" type="button" id="closeModalButton">Close</button>
     </div>
   </div>
   <script src="./script.js" defer></script>

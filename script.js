@@ -21,7 +21,7 @@ yesModal.addEventListener("click", (e) => {
   }
 });
 
-// Playful "No" button that dodges the cursor and never really works
+// Playful "No" button that dodges the cursor
 const noButton = document.getElementById("noButton");
 let noTimeout = null;
 
@@ -53,32 +53,33 @@ function vanishAndReappear() {
     randomPositionWithinParent();
     noButton.style.opacity = "1";
     noButton.style.pointerEvents = "auto";
-  }, 600 + Math.random() * 800);
+  }, 300 + Math.random() * 400);
 }
 
-// Move on hover / focus / touch
+// Move on hover / focus
 ["mouseenter", "focus"].forEach((ev) => {
   noButton.addEventListener(ev, vanishAndReappear);
 });
 
+// Touch support
 noButton.addEventListener(
   "touchstart",
   (e) => {
     e.preventDefault();
     vanishAndReappear();
   },
-  { passive: false },
+  { passive: false }
 );
 
-// Guard any click attempts so it never "works"
+// Guard any click attempts
 noButton.addEventListener("click", (e) => {
   e.preventDefault();
   vanishAndReappear();
 });
 
-// Initial small offset so positioning changes feel playful
+// Add smooth transitions
 window.addEventListener("load", () => {
   noButton.style.transition =
-    "opacity 0.25s ease, transform 0.18s ease, left 0.25s ease, top 0.25s ease";
+    "opacity 0.15s ease, left 0.15s ease, top 0.15s ease";
 });
 
